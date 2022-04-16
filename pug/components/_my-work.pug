@@ -1,18 +1,26 @@
-
+mixin card-work(name,image,description)
+  .company__card 
+    .company_visual 
+      img.company__img(src=image, alt=name)
+    .company__information 
+      span.company__name=name
+      p.company__description=description
 #my-work.my-work.container
   .container-content 
     h2.title My work
     p.content 
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, hic. Obcaecati voluptatibus, quo iste corporis commodi quas. Dignissimos commodi possimus, dicta praesentium, rem, quidem at voluptatum libero eos similique hic.
-  .container-works 
-    .page-code
-      .item-page 
-        i.fa-brands.fa-github
-        span.name Github
-      .item-page 
-        i.fa-brands.fa-codepen
-        span.name Codepen
-    .companies-worked 
-      .company_container 
-        
-      
+  .work__container 
+    .work__container--projects
+      a.work__project(href="#")
+        i.work__icon.fa-brands.fa-github
+        span.work__name Github
+      a.work__project(href="#")
+        i.work__icon.fa-brands.fa-codepen
+        span.work__name Codepen
+    .company__container-cards
+      +card-work("Rappi","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("Gold Media Tech","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("Freije","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("Cardian Men","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("MTF Autoservice","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")

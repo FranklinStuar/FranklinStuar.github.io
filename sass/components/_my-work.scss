@@ -1,54 +1,3 @@
-.card{
-  &__container{
-    display: block;
-    position: relative;
-    width: 100%;
-    max-width: 375px;
-    margin: auto;
-    position: relative;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(20px);
-    border-radius: 30px;
-  }
-  &__thumbnail{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 30px 30px 0 0;
-    z-index: 1;
-  }
-  &__content {
-    position: relative;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 0px 0px 30px 30px;
-    margin-top: -20px;
-    z-index: 5;
-    box-sizing: border-box;
-  }
-  &__title{
-    padding: 20px 0;
-    text-align: center;
-    text-decoration: none;
-    color: $white-text;
-    @include font-size(16px,600,1.96px);
-  }
-
-  &--work{
-    width: 100%;
-    a.card__container{
-      text-decoration: none;
-    }
-    &:nth-child(2){
-      .card__container {
-        background: rgba(181, 249, 253, 0.42);
-      }
-    }
-  }
-}
-
 .my-work{
   // border: 1px solid;
   margin: 100px auto;
@@ -60,13 +9,72 @@
   .title{
     margin-bottom: 20px;
   }
-  .container-works{
-    width: 100%;
-    max-width: 850px;
+}
+.work{
+  &__container--projects{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+  &__project{
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    gap: 10px;
+    border: 2px solid $variant-3;
+    background: linear-gradient(144.11deg, $secondary 13.74%, $variant-1 90.91%);
+    padding: 20px 20px 10px;
+    border-radius: 8px;
+    width: 120px;
+    transition: 0.3s background;
+  }
+  &__project:hover{
+    text-decoration: none;
+    background: rgba($secondary, 0.3)
+  }
+  &__icon{
+    font-size: 50px;
+    color: $white-text;
+  }
+  &__name{
+    color: $blue;
+    @include font-size(18px,600)
+  }
+}
+.company{
+  &__card{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 15px;
+    border-bottom: 1px solid $secondary;
+    padding: 20px 0;
+  }
+  &_visual{
+    width: 100%;
+    height: 120px;
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__information{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__name{
+    color: $blue;
+    @include font-size(18px,500,0.96px)
+  }
+  &__description{
+    margin: 0;
+    color: $white-text;
+    @include font-size(12px)
   }
 }
 @media (min-width:768px) {
@@ -74,16 +82,46 @@
     .container-content{
       padding: 20px 30px;
     }
-    
-    .container-works{
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
+  }
+  .work{
+    &__container--projects{
+      gap: 30px;
     }
   }
-  .card{
-    &__thumbnail{
-      height: 160px;
+  .company{
+    &__card{
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    &__name{
+      @include font-size(19px,500,0.96px)
+    }
+    &__description{
+      @include font-size(16px)
+    }
+  }
+}   
+@media (min-width:1024px) {
+  .my-work{
+    margin: 200px auto;
+  }
+  .company{
+    &__container-cards{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 40px;
+    }
+    &__card{
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    &__name{
+      @include font-size(20px,500,0.96px)
+    }
+    &__description{
+      @include font-size(16px)
     }
   }
 }   
