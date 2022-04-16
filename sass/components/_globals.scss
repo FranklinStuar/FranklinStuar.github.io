@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+$font-family: 'Open Sans', sans-serif;
+$font-family-2: 'Cabin', sans-serif;
+$font-family-3: 'Poppins', sans-serif;
+
+$primary: #0F103F;
+$secondary: #1C1C65;
+$variant-1: #2F2F8A;
+$variant-2: #C961DE;
+$variant-3: #2954A3;
+$text-light: #FFF;
+$dark: #0f0f0f;
+$text-color: #0bfcdd;
+$blue: #0bfcdd;
+$blue-skills: rgba(11, 252, 221,.5);
+$white-text: #dfdfdf;
+$max-width-screen: 1236px;
+
+
+// Mixins
+@mixin font-size($size, $font-weight:normal, $letter-spacing:normal, $line-height:1.35) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)* $line-height;	
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+// Funtions
+@function calculateRem($size){
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+
+
+
+.container{
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  .container-content{
+    margin: 0 auto;
+  }
+  .title{
+    text-align: center;
+    color: $text-color;
+    @include font-size(22px,700,1.3px);
+  }
+  .content{
+    text-align: center;
+    color: $white-text;
+    @include font-size(18px,normal,0.96px,1.5);
+  }
+}
+@media (min-width:1024px) {
+  .container {
+    max-width: $max-width-screen;
+    margin: 100px auto;
+    .container-content{
+      padding: 80px 58px;
+    }
+    .title{
+      margin-bottom: 20px;
+      @include font-size(35px,700,1.5px);
+    }
+  }
+}

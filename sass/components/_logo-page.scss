@@ -1,0 +1,107 @@
+.logo-page{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 400px;
+  background: #1a1b1d;
+  border-radius: 50%;
+  box-shadow:  inset 10px 10px 40px rgba(0, 0, 0,2), inset -10px -10px 40px rgba(1, 1, 109, 0.1);
+  .laptop,
+  .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .logo{
+    width: 250px;
+    height: 450px;
+    animation: delete-logo-home 3s linear;
+    transform: scaleY(0);
+    .leaf{
+      width: 100%;
+      height: 33.3%;
+      border-radius: 150px 0 150px 0;
+      background: linear-gradient(145deg, #25262a, #34393f);
+      box-shadow: inset 5px 5px 5px #1d1f22, inset -5px -5px 5px #383d43;
+      position: relative;
+      &:before{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: linear-gradient(145deg, #25262a, #34393f);
+        box-shadow:  3px 3px 6px #1d1f22, -3px -3px 6px #383d43;
+      }
+    }
+    .leaf.leaf-2{
+      border-radius: 0 150px 0 150px;
+      &:before{
+        box-shadow:  -3px -3px 6px #1d1f22, 3px 3px 6px #383d43;
+      }
+    }
+  }
+
+  .laptop{
+    animation: create-laptop-home 3s linear;
+    .screen{
+      width: 320px;
+      height: 200px;
+      background: #1a1b1d;
+      border: 10px solid #1d1f22;
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .screen span{
+      font-size: 60px;
+      color: $blue;
+    }
+    .keyboard{
+      width: 320px;
+      height: 120px;
+      padding: 5px 10px;
+      background: #1a1b1d;
+      border: 10px solid #1d1f22;
+      border-radius: 0 0 10px 10px;
+      transform: perspective(400px) rotateX(70deg);
+      transform-origin: top;
+      box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1);
+      .bar{
+        display: block;
+        width: 100%;
+        height: 15%;
+        margin-bottom: 10px;
+        background: #171718;
+      }
+    }
+  }
+}
+@keyframes delete-logo-home {
+  0%{
+      opacity: 0;
+      transform: scaleY(1) translate(-50%, -50%);
+  }
+  30%,80%{
+      opacity: 1;
+      transform: scaleY(1) translate(-50%, -50%);
+  }
+  100%{
+      opacity: 0;
+      transform: scaleY(0) translate(-50%, -50%);
+  }
+}
+@keyframes create-laptop-home {
+  0%,80%{
+      transform: scaleY(0) translate(-50%, -50%);
+  }
+  100%{
+      transform: scaleY(1) translate(-50%, -50%);
+  }
+}

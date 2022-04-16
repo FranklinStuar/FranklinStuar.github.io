@@ -1,0 +1,31 @@
+.about-me{
+  margin: 100px auto;
+  .container-content{
+    max-width: 470px;
+    padding: 20px 22px;
+    border-radius: 20px;
+    border: 2px solid $variant-3;
+    background: linear-gradient(144.11deg, $secondary 13.74%, $variant-1 90.91%);
+  }
+}
+@media (min-width:767px) {
+  .about-me {
+    .container-content{
+      max-width: 500px;
+      padding: 20px 30px;
+    }
+  }
+}
+@media (min-width:1024px) {
+  .about-me {
+    margin: 100px auto;
+    .container-content{
+      max-width: 750px;
+      padding: 80px 58px;
+    }
+    .title{
+      margin-bottom: 20px;
+      @include font-size(35px,700,1.5px);
+    }
+  }
+}
