@@ -1,7 +1,5 @@
-mixin card-work(name,image,description)
+mixin card-work(name,description)
   .company__card 
-    .company_visual 
-      img.company__img(src=image, alt=name)
     .company__information 
       span.company__name=name
       p.company__description=description
@@ -19,8 +17,8 @@ mixin card-work(name,image,description)
         i.work__icon.fa-brands.fa-codepen
         span.work__name Codepen
     .company__container-cards
-      +card-work("Rappi","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
-      +card-work("Gold Media Tech","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
-      +card-work("Freije","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
-      +card-work("Cardian Men","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
-      +card-work("MTF Autoservice","../../img/default-image.png","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("Rappi","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("Gold Media Tech","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("Freije","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("Cardian Men","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
+      +card-work("MTF Autoservice","Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae similique suscipit, officia minus molestias sapiente laborum beatae voluptates inventore eius?")
