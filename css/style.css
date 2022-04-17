@@ -410,6 +410,7 @@ output {
   padding: 10px 5px;
   border-radius: 25px;
   text-align: center;
+  transition: 0.3s all;
   color: #FFF;
   font-size: 14px;
   font-size: 0.875rem;
@@ -417,14 +418,20 @@ output {
   font-weight: normal;
   letter-spacing: normal; }
   .cta__btn:hover {
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(11, 252, 221, 0.1), 0 0 20px rgba(11, 252, 221, 0.3), 0 0 40px rgba(11, 252, 221, 0.4);
     color: #FFF;
-    text-decoration: none; }
+    transform: scale(1.02); }
 .cta__btn--hire-me {
   background: #2954A3;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); }
+  .cta__btn--hire-me:hover {
+    box-shadow: 0 0 10px rgba(41, 84, 163, 0.1), 0 0 20px rgba(41, 84, 163, 0.3), 0 0 40px rgba(41, 84, 163, 0.4); }
 .cta__btn--download-cv {
-  background: linear-gradient(107.21deg, #1C1C65 24.43%, #2F2F8A 68.95%);
-  box-shadow: 0px 10px 20px rgba(8, 12, 33, 0.15); }
+  box-shadow: 0px 10px 20px rgba(8, 12, 33, 0.15);
+  background: linear-gradient(107.21deg, #1C1C65 24.43%, #2F2F8A 68.95%); }
+  .cta__btn--download-cv:hover {
+    box-shadow: 0 0 10px rgba(47, 47, 138, 0.1), 0 0 20px rgba(47, 47, 138, 0.3), 0 0 40px rgba(47, 47, 138, 0.4); }
 
 @media (min-width: 768px) {
   .cta__btn {
