@@ -1,0 +1,25 @@
+mixin skill-tecnology(icon,name)
+  .swiper-slide.skill__tecnology
+    i.skill__icon(class=icon)
+    span.skill__name=name
+#skills.skills.container
+  .container-content 
+    h2.title Skills
+    p.content 
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, hic. Obcaecati voluptatibus, quo iste corporis commodi quas. Dignissimos commodi possimus, dicta praesentium, rem, quidem at voluptatum libero eos similique hic.
+  .skills__container-slider
+    .swiper.skills__slider
+      .swiper-wrapper
+        +skill-tecnology("fa-brands fa-html5","HTML")
+        +skill-tecnology("fa-brands fa-css3","CSS")
+        +skill-tecnology("fa-brands fa-js","CSS")
+        +skill-tecnology("fa-solid fa-file-code","Pug")
+        +skill-tecnology("fa-brands fa-sass","Sass")
+        +skill-tecnology("fa-brands fa-php","Php")
+        +skill-tecnology("fa-brands fa-wordpress","Wordpress")
+        +skill-tecnology("fa-brands fa-vuejs","Vuejs")
+        +skill-tecnology("fa-brands fa-laravel","Laravel")
+        +skill-tecnology("fa-brands fa-bootstrap","Bootstrap")
+      .swiper-button-next
+      .swiper-button-prev
+      .swiper-pagination

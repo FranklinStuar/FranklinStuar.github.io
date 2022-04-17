@@ -709,5 +709,63 @@ body {
     line-height: 1.35rem;
     font-weight: normal;
     letter-spacing: normal; } }
+.skills {
+  margin: 100px auto; }
+  .skills .container-content {
+    max-width: 800px;
+    text-align: center; }
+  .skills .title {
+    margin-bottom: 20px; }
+  .skills__slider {
+    padding: 50px 0; }
+  .skills__container-slider {
+    width: 100%;
+    max-width: 600px;
+    margin: auto; }
+
+.skill__tecnology {
+  padding: 10px;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #1C1C65;
+  border: 1px solid #2954A3;
+  cursor: pointer; }
+.skill__icon {
+  font-size: 25px;
+  color: #dfdfdf;
+  transition: 0.3s all; }
+.skill__name {
+  margin: 0;
+  color: #0bfcdd;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.096875rem;
+  font-weight: 500;
+  letter-spacing: 1.96px; }
+.skill__tecnology:hover .skill__icon {
+  text-shadow: 0 0 10px rgba(11, 252, 221, 0.1), 0 0 20px rgba(11, 252, 221, 0.3), 0 0 40px rgba(11, 252, 221, 0.4);
+  color: #0bfcdd; }
+
+@media (min-width: 1024px) {
+  .skills__container-slider {
+    max-width: 900px; }
+
+  .skill__tecnology {
+    padding: 20px;
+    width: 120px; }
+  .skill__icon {
+    font-size: 35px; }
+  .skill__name {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 1.96px; } }
 
 /*# sourceMappingURL=style.css.map */
