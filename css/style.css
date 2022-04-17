@@ -397,6 +397,42 @@ output {
     font-weight: normal;
     letter-spacing: 0.96px; }
 
+.cta__container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 350px;
+  padding: 20px 0;
+  margin: 0 auto; }
+.cta__btn {
+  width: 100%;
+  text-decoration: none;
+  padding: 10px 5px;
+  border-radius: 25px;
+  text-align: center;
+  color: #FFF;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.18125rem;
+  font-weight: normal;
+  letter-spacing: normal; }
+  .cta__btn:hover {
+    color: #FFF;
+    text-decoration: none; }
+.cta__btn--hire-me {
+  background: #2954A3;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); }
+.cta__btn--download-cv {
+  background: linear-gradient(107.21deg, #1C1C65 24.43%, #2F2F8A 68.95%);
+  box-shadow: 0px 10px 20px rgba(8, 12, 33, 0.15); }
+
+@media (min-width: 768px) {
+  .cta__btn {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.51875rem;
+    font-weight: normal;
+    letter-spacing: normal; } }
 @media (min-width: 1024px) {
   .container {
     max-width: 1236px;
@@ -490,33 +526,10 @@ body {
       line-height: 1.51875rem;
       font-weight: normal;
       letter-spacing: 1.96px; }
-  .home .container-buttons-cta {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    max-width: 350px;
-    padding: 20px 0;
-    margin: 0 auto; }
-    .home .container-buttons-cta a {
-      width: 100%;
-      text-decoration: none;
-      padding: 10px 5px;
-      border-radius: 25px;
-      text-align: center;
-      color: #FFF;
-      font-size: 14px;
-      font-size: 0.875rem;
-      line-height: 1.18125rem;
-      font-weight: normal;
-      letter-spacing: normal; }
-    .home .container-buttons-cta .hire-me {
-      background: #2954A3;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); }
-    .home .container-buttons-cta .download-cv {
-      background: linear-gradient(107.21deg, #1C1C65 24.43%, #2F2F8A 68.95%);
-      box-shadow: 0px 10px 20px rgba(8, 12, 33, 0.15); }
   .home .img-presentation {
     display: none; }
+  .home .cta__container {
+    justify-content: space-around; }
 
 .home.section-page {
   height: auto; }
@@ -530,14 +543,7 @@ body {
     font-size: 2.8125rem;
     line-height: 3.796875rem;
     font-weight: 700;
-    letter-spacing: 1px; }
-
-  .container-buttons-cta {
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 1.51875rem;
-    font-weight: normal;
-    letter-spacing: normal; } }
+    letter-spacing: 1px; } }
 @media (min-width: 1024px) {
   .home {
     display: flex;
@@ -559,7 +565,7 @@ body {
         line-height: 1.85625rem;
         font-weight: normal;
         letter-spacing: 1.96px; }
-    .home .container-buttons-cta {
+    .home .cta__container {
       margin: 0; } }
 .about-me {
   margin: 100px auto; }
@@ -767,5 +773,50 @@ body {
     line-height: 1.35rem;
     font-weight: 500;
     letter-spacing: 1.96px; } }
+.get-in-touch {
+  margin: 100px auto; }
+  .get-in-touch .container-content {
+    max-width: 470px;
+    padding: 20px 22px;
+    border-radius: 20px;
+    border: 2px solid #2954A3;
+    background: linear-gradient(144.11deg, #1C1C65 13.74%, #2F2F8A 90.91%);
+    backdrop-filter: blur(20px); }
+  .get-in-touch .cta__container {
+    margin-bottom: 20px; }
+
+.social-icons {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px; }
+  .social-icons__link {
+    color: #dfdfdf;
+    transition: 0.3s all; }
+    .social-icons__link:hover {
+      color: #0bfcdd;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(11, 252, 221, 0.1), 0 0 20px rgba(11, 252, 221, 0.3), 0 0 40px rgba(11, 252, 221, 0.4); }
+  .social-icons__icon {
+    font-size: 22px; }
+
+@media (min-width: 767px) {
+  .get-in-touch .container-content {
+    max-width: 500px;
+    padding: 20px 30px; } }
+@media (min-width: 1024px) {
+  .get-in-touch {
+    margin: 100px auto; }
+    .get-in-touch .container-content {
+      max-width: 750px;
+      padding: 80px 58px; }
+    .get-in-touch .title {
+      margin-bottom: 20px;
+      font-size: 35px;
+      font-size: 2.1875rem;
+      line-height: 2.953125rem;
+      font-weight: 700;
+      letter-spacing: 1.5px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+.get-in-touch{
+  margin: 100px auto;
+  .container-content{
+    max-width: 470px;
+    padding: 20px 22px;
+    border-radius: 20px;
+    border: 2px solid $variant-3;
+    background: linear-gradient(144.11deg, $secondary 13.74%, $variant-1 90.91%);
+    backdrop-filter: blur(20px);
+  }
+  .cta__container{
+    margin-bottom: 20px;
+  }
+}
+.social-icons{
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  &__link{
+    color: $white-text;
+    transition: 0.3s all;
+    &:hover{
+      color: $blue;
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba($blue, 0.1), 0 0 20px rgba($blue, 0.3), 0 0 40px rgba($blue, 0.4);
+    }
+  }
+  &__icon{
+    font-size: 22px;
+  }
+}
+@media (min-width:767px) {
+  .get-in-touch {
+    .container-content{
+      max-width: 500px;
+      padding: 20px 30px;
+    }
+  }
+}
+@media (min-width:1024px) {
+  .get-in-touch {
+    margin: 100px auto;
+    .container-content{
+      max-width: 750px;
+      padding: 80px 58px;
+    }
+    .title{
+      margin-bottom: 20px;
+      @include font-size(35px,700,1.5px);
+    }
+  }
+}
