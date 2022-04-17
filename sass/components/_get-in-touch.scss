@@ -1,12 +1,12 @@
 .get-in-touch{
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 100px 0;
   .container-content{
     max-width: 470px;
     padding: 20px 22px;
     border-radius: 20px;
     border: 2px solid $variant-3;
     background: linear-gradient(144.11deg, $secondary 13.74%, $variant-1 90.91%);
-    backdrop-filter: blur(20px);
   }
   .cta__container{
     margin-bottom: 20px;
@@ -41,7 +41,6 @@
 }
 @media (min-width:1024px) {
   .get-in-touch {
-    margin: 100px auto;
     .container-content{
       max-width: 750px;
       padding: 80px 58px;

@@ -36,7 +36,11 @@ $max-width-screen: 1236px;
 }
 
 
+// Code
 
+html {
+  scroll-behavior: smooth;
+}
 
 .container{
   width: calc(100% - 20px);

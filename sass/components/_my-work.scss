@@ -1,6 +1,6 @@
 .my-work{
-  // border: 1px solid;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 100px 0 0;
   .container-content{
     max-width: 800px;
     text-align: center;
@@ -96,9 +96,7 @@
   }
 }   
 @media (min-width:1024px) {
-  .my-work{
-    margin: 200px auto;
-  }
+  
   .company{
     &__container-cards{
       display: grid;

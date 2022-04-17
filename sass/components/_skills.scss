@@ -1,5 +1,6 @@
 .skills{
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 100px 0;
   .container-content{
     max-width: 800px;
     text-align: center;
@@ -47,8 +48,6 @@
       color: $blue;
     }
   }
-}
-@media (min-width:1024px) {
 }
 @media (min-width:1024px) {
   

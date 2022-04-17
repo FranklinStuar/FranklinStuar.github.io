@@ -1,52 +1,87 @@
+.header-page{
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: 10px 30px;
+  backdrop-filter: blur(10px);
+  background-color: rgba($variant-3, 0.1);
+  .container{
+    margin: 0 auto;
+  }
+}
 
 .menu{
-  position: fixed;
-  top: 20px;
-  left: 50px;
-  z-index: 99;
-  padding: 5px 10px;
-  backdrop-filter: blur(10px);
-  
-  &.advance-page{
-    top: 0;
-    background: rgba(23, 23, 24, 0.5);
+  &__icon-container{
+    font-size: 32px;
+    color: $text-light;
+    cursor: pointer;
+    text-align: end;
+    margin-bottom: 0;
   }
-  nav{
-    box-sizing: border-box;
-  }
-  ul{
+  &__list{
     list-style: none;
     padding: 0;
-    li{
-      display: inline-block;
-      padding: 0px;
-    }
-    li a{
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    height: 0;
+    overflow: hidden;
+  }
+  &__item{
+    padding: 0px;
+  }
+  &__link{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    padding: 8px 20px;
+    outline: none;
+    position: relative;
+    color: $text-light;
+    @include font-size(18px,700px);
+    &:hover{
       text-decoration: none;
-      color: $text-light;
-      @include font-size(16px,700px);
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      padding: 8px 12px;
-      outline: none;
-      position: relative;
-      &.active{
-        color: $blue;
-      }
-      &:before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        bottom: -5px;
-        background: $blue;
-        transform: scaleX(0);
-        transition: .3s;
-      }
-      &:hover:before{
-        transform: scaleX(1);
-      }
+      color: $text-light;  
     }
+    &.active{
+      color: $blue;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background: $blue;
+      transform: scaleX(0);
+      transition: .3s;
+    }
+    &:hover:before{
+      transform: scaleX(1);
+    }
+  }
+}
+
+
+@media (min-width:768px) {
+  .header-page{
+    display: block;
+  }
+  .menu{
+    &__list{
+      display: flex;
+      justify-content: center;
+      height: auto;
+    }
+    &__icon-container{
+      display: none;
+    }
+    
   }
 }

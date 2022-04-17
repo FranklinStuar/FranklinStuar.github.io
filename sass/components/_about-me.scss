@@ -1,5 +1,6 @@
 .about-me{
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 100px 0 ;
   .container-content{
     max-width: 470px;
     padding: 20px 22px;
@@ -18,7 +19,6 @@
 }
 @media (min-width:1024px) {
   .about-me {
-    margin: 100px auto;
     .container-content{
       max-width: 750px;
       padding: 80px 58px;

@@ -375,6 +375,9 @@ output {
   display: none !important; }
 
 /*# sourceMappingURL=bootstrap-reboot.css.map */
+html {
+  scroll-behavior: smooth; }
+
 .container {
   width: calc(100% - 20px);
   margin: 0 auto; }
@@ -461,55 +464,81 @@ body {
   font-family: "Poppins", sans-serif;
   position: relative; }
 
-.menu {
+.header-page {
+  display: none;
   position: fixed;
-  top: 20px;
-  left: 50px;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 99;
-  padding: 5px 10px;
-  backdrop-filter: blur(10px); }
-  .menu.advance-page {
-    top: 0;
-    background: rgba(23, 23, 24, 0.5); }
-  .menu nav {
-    box-sizing: border-box; }
-  .menu ul {
-    list-style: none;
-    padding: 0; }
-    .menu ul li {
-      display: inline-block;
-      padding: 0px; }
-    .menu ul li a {
-      text-decoration: none;
-      color: #FFF;
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1.35rem;
-      font-weight: 700px;
-      letter-spacing: normal;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      padding: 8px 12px;
-      outline: none;
-      position: relative; }
-      .menu ul li a.active {
-        color: #0bfcdd; }
-      .menu ul li a:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        bottom: -5px;
-        background: #0bfcdd;
-        transform: scaleX(0);
-        transition: .3s; }
-      .menu ul li a:hover:before {
-        transform: scaleX(1); }
+  padding: 10px 30px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(41, 84, 163, 0.1); }
+  .header-page .container {
+    margin: 0 auto; }
 
+.menu__icon-container {
+  font-size: 32px;
+  color: #FFF;
+  cursor: pointer;
+  text-align: end;
+  margin-bottom: 0; }
+.menu__list {
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  height: 0;
+  overflow: hidden; }
+.menu__item {
+  padding: 0px; }
+.menu__link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  padding: 8px 20px;
+  outline: none;
+  position: relative;
+  color: #FFF;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.51875rem;
+  font-weight: 700px;
+  letter-spacing: normal; }
+  .menu__link:hover {
+    text-decoration: none;
+    color: #FFF; }
+  .menu__link.active {
+    color: #0bfcdd; }
+  .menu__link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #0bfcdd;
+    transform: scaleX(0);
+    transition: .3s; }
+  .menu__link:hover:before {
+    transform: scaleX(1); }
+
+@media (min-width: 768px) {
+  .header-page {
+    display: block; }
+
+  .menu__list {
+    display: flex;
+    justify-content: center;
+    height: auto; }
+  .menu__icon-container {
+    display: none; } }
 .home {
-  margin: 150px auto 100px;
-  padding: 0; }
+  margin: 0 auto;
+  padding: 200px 0 50px; }
   .home .information {
     padding-bottom: 50px;
     text-align: center; }
@@ -533,8 +562,6 @@ body {
       line-height: 1.51875rem;
       font-weight: normal;
       letter-spacing: 1.96px; }
-  .home .img-presentation {
-    display: none; }
   .home .cta__container {
     justify-content: space-around; }
 
@@ -543,7 +570,7 @@ body {
 
 @media (min-width: 768px) {
   .home {
-    margin: 150px auto 0; }
+    padding: 150px 0 0; }
 
   .home .information h1.title-page {
     font-size: 45px;
@@ -556,8 +583,7 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 150px auto 0;
-    padding: 50px; }
+    padding: 150px 50px 50px; }
     .home .information {
       text-align: start; }
       .home .information h1.title-page {
@@ -575,7 +601,8 @@ body {
     .home .cta__container {
       margin: 0; } }
 .about-me {
-  margin: 100px auto; }
+  margin: 0 auto;
+  padding: 100px 0; }
   .about-me .container-content {
     max-width: 470px;
     padding: 20px 22px;
@@ -588,20 +615,19 @@ body {
     max-width: 500px;
     padding: 20px 30px; } }
 @media (min-width: 1024px) {
-  .about-me {
-    margin: 100px auto; }
-    .about-me .container-content {
-      max-width: 750px;
-      padding: 80px 58px; }
-    .about-me .title {
-      margin-bottom: 20px;
-      font-size: 35px;
-      font-size: 2.1875rem;
-      line-height: 2.953125rem;
-      font-weight: 700;
-      letter-spacing: 1.5px; } }
+  .about-me .container-content {
+    max-width: 750px;
+    padding: 80px 58px; }
+  .about-me .title {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-size: 2.1875rem;
+    line-height: 2.953125rem;
+    font-weight: 700;
+    letter-spacing: 1.5px; } }
 .my-work {
-  margin: 100px auto; }
+  margin: 0 auto;
+  padding: 100px 0 0; }
   .my-work .container-content {
     max-width: 800px;
     text-align: center;
@@ -693,9 +719,6 @@ body {
     font-weight: normal;
     letter-spacing: normal; } }
 @media (min-width: 1024px) {
-  .my-work {
-    margin: 200px auto; }
-
   .company__container-cards {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -718,7 +741,8 @@ body {
     font-weight: normal;
     letter-spacing: normal; } }
 .skills {
-  margin: 100px auto; }
+  margin: 0 auto;
+  padding: 100px 0; }
   .skills .container-content {
     max-width: 800px;
     text-align: center; }
@@ -776,14 +800,14 @@ body {
     font-weight: 500;
     letter-spacing: 1.96px; } }
 .get-in-touch {
-  margin: 100px auto; }
+  margin: 0 auto;
+  padding: 100px 0; }
   .get-in-touch .container-content {
     max-width: 470px;
     padding: 20px 22px;
     border-radius: 20px;
     border: 2px solid #2954A3;
-    background: linear-gradient(144.11deg, #1C1C65 13.74%, #2F2F8A 90.91%);
-    backdrop-filter: blur(20px); }
+    background: linear-gradient(144.11deg, #1C1C65 13.74%, #2F2F8A 90.91%); }
   .get-in-touch .cta__container {
     margin-bottom: 20px; }
 
@@ -808,17 +832,15 @@ body {
     max-width: 500px;
     padding: 20px 30px; } }
 @media (min-width: 1024px) {
-  .get-in-touch {
-    margin: 100px auto; }
-    .get-in-touch .container-content {
-      max-width: 750px;
-      padding: 80px 58px; }
-    .get-in-touch .title {
-      margin-bottom: 20px;
-      font-size: 35px;
-      font-size: 2.1875rem;
-      line-height: 2.953125rem;
-      font-weight: 700;
-      letter-spacing: 1.5px; } }
+  .get-in-touch .container-content {
+    max-width: 750px;
+    padding: 80px 58px; }
+  .get-in-touch .title {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-size: 2.1875rem;
+    line-height: 2.953125rem;
+    font-weight: 700;
+    letter-spacing: 1.5px; } }
 
 /*# sourceMappingURL=style.css.map */
