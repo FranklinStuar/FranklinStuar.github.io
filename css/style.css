@@ -486,12 +486,7 @@ body {
 .menu__list {
   list-style: none;
   padding: 0;
-  box-sizing: border-box;
-  display: grid;
-  align-items: center;
-  gap: 20px;
-  height: 0;
-  overflow: hidden; }
+  box-sizing: border-box; }
 .menu__item {
   padding: 0px; }
 .menu__link {
