@@ -1,0 +1,13 @@
+mixin titlePage(title)
+  .container.container--title
+    h1.title #{title}
+mixin titleBlog(title, imgFeatured)
+  .container.container--title.container--blog
+    .blog__featured
+      img(src=imgFeatured, alt=title)
+    .blog__content-title
+      h1.title #{title}
+      .blog__info 
+        span.blog__autor Franklin Peñafiel
+        a.blog_category Uncategorized 
+        span.blog_date 9-mayo-2022
