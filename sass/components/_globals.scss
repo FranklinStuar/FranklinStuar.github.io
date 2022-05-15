@@ -42,6 +42,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.no-scroll{
+  overflow: hidden;
+}
+
 .container{
   width: calc(100% - 20px);
   margin: 0 auto;

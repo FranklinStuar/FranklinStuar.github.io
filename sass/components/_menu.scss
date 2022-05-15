@@ -1,16 +1,22 @@
 .header-page{
   width: 100%;
   z-index: 99;
-  overflow: hidden;
   top: 0;
   left: 0;
   position: sticky;
-  backdrop-filter: blur(10px);
   background-color: rgba($variant-3, 0.1);
+  backdrop-filter: blur(10px);
   // only mobile
   padding: 15px 20px;
   border-bottom: 1px solid rgba($blue, 0.2);
   box-shadow: 0 4px 20px 0 rgba($variant-3, 0.5);
+  transition: 0.25s backdrop-filter;
+  &--menu-open{
+    backdrop-filter: none;
+    .menu__list--container{
+      left: 0;
+    }
+  }
 }
 
 .menu{
@@ -22,28 +28,26 @@
     cursor: pointer;
     font-size: 32px;
     color: $text-light;
-    padding: 15px 20px;
   }
   &__list--container{
     box-sizing: border-box;
     text-align: end;
     /*Only mobile*/
+    padding: 15px 25px;
     position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
-    height: 100%;
-    border: 1px solid $blue-skills;
+    height: 100vh;
+    // border: 1px solid $blue-skills;
     z-index: 5;
     display: grid;
     align-content: start;
     gap: 40px;
-    backdrop-filter: blur(10px);
     background: rgba($dark, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     transition: 0.5s left;
-    &-opened{
-      left: 0;
-    }
   }
   &__list{
     list-style: none;
