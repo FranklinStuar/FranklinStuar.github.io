@@ -379,7 +379,10 @@ html {
   scroll-behavior: smooth; }
 
 .no-scroll {
-  overflow: hidden; }
+  overflow: hidden !important; }
+
+.none {
+  display: none !important; }
 
 .container {
   width: calc(100% - 20px);
