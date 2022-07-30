@@ -1,4 +1,23 @@
 extend ./components/_template
+mixin postArchive(title)
+  .post 
+    a(href="#").post__link--title 
+      h3.post__title #{title}
+    .post__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus velit reiciendis mollitia saepe. Rem autem tenetur veritatis sunt quibusdam harum odit delectus perferendis id neque, commodi cumque esse! Distinctio.
+    .post__container-button 
+      a(href="#").post__link View More 
+
 block content 
   main.archive 
-    div.cover
+    +titlePage("Blog")
+    .container
+      .container--content-page
+        .posts-list
+          +postArchive("Lorem ipsum dolor sit amet consectetur adipisicing elit.")
+          +postArchive("Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta natus velit.")
+          +postArchive("Lorem ipsum dolor sit amet consectetur adipisicing eliticta natus.")
+          +postArchive("Lorem ipsum dolor sit amet consectetur adipisicing.")
+          +postArchive("Lorem ipsum dolor sit amet consectetur adipisicing quibusdam harum odit.")
+          +postArchive("Lorem ipsum dolor sit amet consectetur.")
+          +postArchive("Lorem ipsum dolor sit.")
+        
