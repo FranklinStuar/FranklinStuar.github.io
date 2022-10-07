@@ -1,5 +1,5 @@
 
-.home{
+.main-home{
   margin: 0 auto;
   padding: 200px 0 50px;
   .information{
@@ -27,19 +27,19 @@
     }
   }
 }
-.home.section-page{
+.main-home.section-page{
   height: auto;
 }
 @media (min-width:768px) {
-  .home{
+  .main-home{
     padding: 150px 0 0;
   }
-  .home .information h1.title-page{
+  .main-home .information h1.title-page{
     @include font-size(45px,700,1px);
   }
 }
 @media (min-width:1024px) {
-  .home{
+  .main-home{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
