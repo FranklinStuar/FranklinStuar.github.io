@@ -14,3 +14,15 @@
 
 // importa los assets que se utilizarán en el proyecto, css, js y diferente librerias 
 include_once get_theme_file_path( 'includes/scripts.php' );
+
+add_action('after_setup_theme', 'init_template');
+
+function init_template()
+{
+  add_theme_support("title-tag"); // Titulo de cabecera para en navegador
+  add_theme_support("post-thumbnails"); // Opción de aceptar imágenes destacadas para cada post o page
+
+  register_nav_menus(array( // se asigna el menú principal del tema y se habilita la opción de menus
+    "top_menu" => "Menu"
+  ));
+}

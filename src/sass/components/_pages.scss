@@ -58,7 +58,7 @@
   height: 400px;
   position: relative;
 }
-.main-blog{
+.single-content{
   &__featured{
     position: absolute;
     top: 0;
@@ -127,7 +127,7 @@
         @include font-size(45px,700,normal,1.5);
     }
   }
-  .main-blog{
+  .single-content{
     & &__content-title .title{
         @include font-size(55px,700,1px,1.3);
     }
