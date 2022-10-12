@@ -23,6 +23,6 @@ function init_template()
   add_theme_support("post-thumbnails"); // Opción de aceptar imágenes destacadas para cada post o page
 
   register_nav_menus(array( // se asigna el menú principal del tema y se habilita la opción de menus
-    "top_menu" => "Menu"
+    "top_menu" => "Header"
   ));
 }
