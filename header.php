@@ -25,10 +25,10 @@
           <div class="menu__icon-container"><i class="menu__icon menu__icon--open fa-solid fa-bars"> </i></div>
           <div class="menu__list--container"><i class="menu__icon menu__icon--opened fa-solid fa-xmark"> </i>
             <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
-              <li class="menu__item"><a class="menu__link" href="./page.html">Page</a></li>
-              <li class="menu__item"><a class="menu__link" href="./single.html">Post</a></li>
-              <li class="menu__item"><a class="menu__link" href="./archive.html">Archives</a></li>
+
+              <?php foreach(wp_get_nav_menu_items("Header") as $menuItem): ?>
+                <li class="menu__item"><a class="menu__link" href="<?php echo $menuItem->url ?>"><?php echo $menuItem->title ?></a></li>
+              <?php endforeach ?>
             </ul>
           </div>
         </nav>
