@@ -12,11 +12,11 @@
       <div class="posts-list">
         <?php while (have_posts()): the_post();?>
         <div class="post"> 
-          <a class="post__link--title" href="<?php echo get_permalink(get_the_ID(),true) ?>">
+          <a class="post__link--title" href="<?php echo get_permalink(get_the_ID()) ?>">
             <h3 class="post__title"><?php the_title() ?></h3>
           </a>
           <div class="post__description"><?php echo get_the_excerpt() ?></div>
-          <div class="post__container-button"> <a class="post__link" href="<?php echo get_permalink(get_the_ID(),true) ?>">View More </a></div>
+          <div class="post__container-button"> <a class="post__link" href="<?php echo get_permalink(get_the_ID()) ?>">View More </a></div>
         </div>
         <?php endwhile?>
       </div>
