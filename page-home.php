@@ -29,85 +29,76 @@
     </div>
   </div>
   <?php endif ?>
-  <div class="my-work container" id="my-work">
-    <div class="container-content">
-      <h2 class="title">My work</h2>
-      <p class="content">
-        <Lorem>ipsum dolor sit amet consectetur adipisicing elit. Facere, hic. Obcaecati voluptatibus, quo iste corporis
-          commodi quas. Dignissimos commodi possimus, dicta praesentium, rem, quidem at voluptatum libero eos similique
-          hic.</Lorem>
-      </p>
-    </div>
-    <div class="work__container">
-      <?php if ( have_rows( 'repositories' ) ) : ?>
-      <div class="work__container--projects">
-        <?php while ( have_rows( 'repositories' ) ) : the_row(); ?>
-
-        <a class="work__project" href="<?php the_sub_field( 'link' ); ?>">
-          <i class="work__icon <?php the_sub_field( 'icon_font_awesome' ); ?>"></i>
-          <span class="work__name"><?php the_sub_field( 'title' ); ?></span>
-        </a>
-        <?php endwhile; ?>
+  
+  <?php if(get_field( 'my_works' )): ?>
+    <div class="my-work container" id="my-work">
+      <div class="container-content">
+        <h2 class="title">My work</h2>
+        <p class="content">
+          <?php the_field( 'my_works' ); ?>
+        </p>
       </div>
-      <?php endif; ?>
-
-      <?php if ( have_rows( 'companies' ) ) : ?>
-      <div class="company__container-cards">
-        <?php while ( have_rows( 'companies' ) ) : the_row(); ?>
-        <div class="company__card">
-          <div class="company__information"> <span class="company__name"><?php the_sub_field( 'name' ); ?></span>
-            <p class="company__description"><?php the_sub_field( 'description' ); ?></p>
+      <div class="work__container">
+        <?php if ( have_rows( 'repositories' ) ) : ?>
+        <div class="work__container--projects">
+          <?php while ( have_rows( 'repositories' ) ) : the_row(); ?>
+  
+          <a class="work__project" href="<?php the_sub_field( 'link' ); ?>">
+            <i class="work__icon <?php the_sub_field( 'icon_font_awesome' ); ?>"></i>
+            <span class="work__name"><?php the_sub_field( 'title' ); ?></span>
+          </a>
+          <?php endwhile; ?>
+        </div>
+        <?php endif; ?>
+  
+        <?php if ( have_rows( 'companies' ) ) : ?>
+        <div class="company__container-cards">
+          <?php while ( have_rows( 'companies' ) ) : the_row(); ?>
+          <div class="company__card">
+            <div class="company__information"> <span class="company__name"><?php the_sub_field( 'name' ); ?></span>
+              <p class="company__description"><?php the_sub_field( 'description' ); ?></p>
+            </div>
           </div>
+          <?php endwhile; ?>
         </div>
-        <?php endwhile; ?>
+        <?php endif; ?>
+  
       </div>
-      <?php endif; ?>
+    </div>
+  <?php endif ?>
 
-    </div>
-  </div>
-  <div class="skills container" id="skills">
-    <div class="container-content">
-      <h2 class="title">Skills</h2>
-      <p class="content">
-        <Lorem>I was a full stack developer but I love all about design. I'm currently a frontend developer and I'm
-          trying to do the best webs for my clients and my jobs</Lorem>
-      </p>
-    </div>
-    <div class="skills__container-slider">
-      <div class="swiper skills__slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-html5"></i><span
-              class="skill__name">HTML</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-css3"></i><span
-              class="skill__name">CSS</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-js"></i><span
-              class="skill__name">CSS</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-solid fa-file-code"></i><span
-              class="skill__name">Pug</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-sass"></i><span
-              class="skill__name">Sass</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-php"></i><span
-              class="skill__name">Php</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-wordpress"></i><span
-              class="skill__name">Wordpress</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-vuejs"></i><span
-              class="skill__name">Vuejs</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-laravel"></i><span
-              class="skill__name">Laravel</span></div>
-          <div class="swiper-slide skill__tecnology"><i class="skill__icon fa-brands fa-bootstrap"></i><span
-              class="skill__name">Bootstrap</span></div>
+  <?php if ( have_rows( 'skills' ) ) : ?>
+    <div class="skills container" id="skills">
+      <div class="container-content">
+        <h2 class="title">Skills</h2>
+        <p class="content">
+          <span>I was a full stack developer but I love all about design. I'm currently a frontend developer and I'm
+            trying to do the best webs for my clients and my jobs</span>
+        </p>
+      </div>
+      <div class="skills__container-slider">
+        <div class="swiper skills__slider">
+          <div class="swiper-wrapper">
+            <?php while ( have_rows( 'skills' ) ) : the_row(); ?>
+              <div class="swiper-slide skill__tecnology">
+                <i class="skill__icon <?php the_sub_field( 'icon' ); ?>"></i>
+                <span class="skill__name"><?php the_sub_field( 'name' ); ?></span>
+              </div>
+            <?php endwhile; ?>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
+
+
   <div class="get-in-touch container" id="get-in-touch">
     <div class="container-content">
       <h2 class="title">Work with me!</h2>
-      <p class="content"> I'm very approachable and would love to speak to you. Feel free to send me a message on
-        whatsapp or contact download my CV and send me an email. You can too follow me in social media</p>
+      <p class="content"> I would like we can tell about new projects or a new position of job. If you want contact me, you could send me a message on linkedin. You also can download my cv for more information about me and my work.</p>
       <?php if ( have_rows( 'cta_buttons' ) ) : ?>
       <?php while ( have_rows( 'cta_buttons' ) ) : the_row(); ?>
 
