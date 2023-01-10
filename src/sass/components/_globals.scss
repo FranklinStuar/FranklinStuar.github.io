@@ -1,10 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-$font-family: 'Open Sans', sans-serif;
-$font-family-2: 'Cabin', sans-serif;
-$font-family-3: 'Poppins', sans-serif;
+$font-family: 'Poppins', sans-serif;
 
 $primary: #0F103F;
 $secondary: #1C1C65;
@@ -39,7 +34,11 @@ $max-width-screen: 1236px;
 // Code
 
 html {
+  font-family: sans-serif, Arial, Helvetica;
   scroll-behavior: smooth;
+}
+html.wf-active {
+  font-family: $font-family;
 }
 
 .no-scroll{
