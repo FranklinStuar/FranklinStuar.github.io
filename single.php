@@ -6,7 +6,13 @@
 <?php while (have_posts()): the_post();?>
   <main class="single-content">
     <div class="container container--title container--blog">
-      <div class="single-content__featured"><img src="<? echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" alt="<?php the_title() ?>"/></div>
+      <div class="single-content__featured">
+        <picture>
+          <source media="(min-width: 768px)" srcset="<? echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>">
+          <source srcset="<? echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>">
+          <img src="<? echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>" alt="<?php the_title() ?>"/>
+        </picture>
+      </div>
       <div class="single-content__content-title">
         <h1 class="title"><?php the_title() ?></h1>
         <div class="single-content__info"> <span class="single-content__date"><?php echo get_the_date() ?></span></div>
