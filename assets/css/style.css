@@ -459,6 +459,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0F103F;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
 .no-scroll {
   overflow: hidden !important;
 }
@@ -565,15 +574,6 @@ html {
     letter-spacing: 1.5px;
   }
 }
-body {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #0F103F;
-  font-family: "Poppins", sans-serif;
-  position: relative;
-}
-
 .header-page {
   width: 100%;
   z-index: 99;

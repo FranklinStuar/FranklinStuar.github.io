@@ -1,7 +1,5 @@
 
-$font-family: 'Open Sans', sans-serif;
-$font-family-2: 'Cabin', sans-serif;
-$font-family-3: 'Poppins', sans-serif;
+$font-family: 'Poppins', sans-serif;
 
 $primary: #0F103F;
 $secondary: #1C1C65;
@@ -37,6 +35,14 @@ $max-width-screen: 1236px;
 
 html {
   scroll-behavior: smooth;
+}
+body{
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $primary;
+  font-family: $font-family;
+  position: relative;
 }
 
 .no-scroll{
