@@ -13,6 +13,10 @@
   color: rgba($white-text, 0.8);
   padding: 30px 15px;
   @include font-size(16px,normal,normal,1.6);
+  .posts-list{
+    display: grid;
+    gap: 32px;
+  }
   & p{
     margin-bottom: 22px;
   }
