@@ -1,20 +1,22 @@
-var swiper = new Swiper(".skills__slider", {
-  spaceBetween: 30,
-  slidesPerView: "auto",
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+const sliderHome = () =>{
+  new Swiper(".skills__slider", {
+    spaceBetween: 30,
+    slidesPerView: "auto",
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+} 
 
 
 let menuFuntion = () => {
@@ -42,4 +44,12 @@ let menuFuntion = () => {
     closeMenu(item)
   });
 }
-menuFuntion()
+
+document.addEventListener("DOMContentLoaded",() => {
+  menuFuntion()
+})
+window.addEventListener("load",() => {
+  if(document.querySelector(".skills__slider")){
+    sliderHome()
+  }
+})
